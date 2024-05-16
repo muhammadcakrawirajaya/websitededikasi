@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --clr-bg-header: #3D8361;
-  --clr-btn: #3D8361;
-  --clr-dropdown: #1C6758;
-  --clr-nav-hover: #1E6F5C;
-  --clr-dropdown-hov: #289672;
-  --clr-dropdown-link-hov: #29BB89;
-  --clr-light: #FAFAFA;
-
-  --primary-color: #a855f7;
+  --primary-color: #0081ff;
+  --blue-2: #1c67b2;
+  --blue-3: #063d75;
+  --blue-4: #0c264e;
+  --blue-5: #42679d;
+  --white-color: #fff;
+  --black-color: #000;
   --primary-color-dark: #9333ea;
   --secondary-color: #ca8a04;
   --text-dark: #1f2937;
@@ -34,6 +32,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  background-color: whitesmoke;
 }
 
 ul {
@@ -47,23 +46,26 @@ a {
 header {
   position: fixed;
   top: 0px;
-  background-color: var(--clr-bg-header);
+  background-color: var(--primary-color);
   width: 100%;
   z-index: 1000;
 }
 
 .header-container {
-  max-width: 65rem;
+  max-width: 85rem;
+  height: 4rem;
   padding: 0 2rem;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   position: relative;
 }
 
 .logo-container {
-  flex: 1;
+  flex: 0;
   display: flex;
   align-items: center;
+  z-index: 9999;
 }
 
 .nav-btn {
@@ -83,23 +85,30 @@ header {
 }
 
 .logo-container .logo {
-  color: var(--clr-light);
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 3rem;
 }
+.logo-container .logo img{
+  width: 35px;
+  margin-right: 3px;
+}
 
 .logo-container .logo span {
-  font-weight: 300;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .btn {
   display: inline-block;
   padding: .5rem 1.3rem;
   font-size: .8rem;
-  border: 2px solid var(--clr-light);
+  border: 2px solid var(--white-color);
   border-radius: 2rem;
   line-height: 1;
   margin: 0 .2rem;
@@ -109,14 +118,14 @@ header {
 
 .btn.solid,
 .btn.transparent:hover {
-  background-color: var(--clr-light);
-  color: var(--clr-btn);
+  background-color: var(--white-color);
+  color: var(--blue-2);
 }
 
 .btn.transparent,
 .btn.solid:hover {
   background-color: transparent;
-  color: var(--clr-light);
+  color: var(--white-color);
 }
 
 .nav-links > ul {
@@ -131,7 +140,7 @@ header {
 
 .nav-link > a {
   line-height: 3rem;
-  color: var(--clr-light);
+  color: var(--white-color);
   padding: 0 .8rem;
   letter-spacing: 1px;
   font-size: .95rem;
@@ -166,8 +175,8 @@ header {
 
 .dropdown-link > a {
   display: flex;
-  background-color: var(--clr-light);
-  color: var(--clr-dropdown);
+  background-color: var(--white-color);
+  color: var(--primary-color);
   padding: .5rem 1rem;
   font-size: .9rem;
   align-items: center;
@@ -176,12 +185,12 @@ header {
 }
 
 .dropdown-link:hover > a {
-  background-color: var(--clr-dropdown);
-  color: var(--clr-light);
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .dropdown-link:not(:nth-last-child(2)) {
-  border-bottom: 1px solid var(--clr-light);
+  border-bottom: 1px solid var(--white-color);
 }
 
 .dropdown-link i {
@@ -194,7 +203,7 @@ header {
   height: 11px;
   top: -5.5px;
   left: 32px;
-  background-color: var(--clr-light);
+  background-color: var(--white-color);
   transform: rotate(45deg);
   cursor: pointer;
   transition: .3s;
@@ -202,7 +211,7 @@ header {
 }
 
 .dropdown-link:first-child:hover ~ .arrow {
-  background-color: var(--clr-dropdown);
+  background-color: var(--primary-color);
 }
 
 .dropdown-link {
@@ -248,7 +257,7 @@ header {
   width: 1.6rem;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--clr-light);
+  background-color: var(--white-color);
   position: relative;
   z-index: 1001;
   transition: .5s;
@@ -260,7 +269,7 @@ header {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: var(--clr-light);
+  background-color: var(--white-color);
   border-radius: 3px;
   transition: .5s;
 }
@@ -298,6 +307,51 @@ header {
   transform: translateY(0) rotate(45deg);
 }
 
+
+.header-container .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container .button a {
+  position: relative;
+  font-size: 14px;
+  padding: 8px 20px;
+  letter-spacing: 0.1em;
+  background: #007ea7;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+  transition: 0.5s;
+  color: var(--white-color);
+  border-radius: 5px;
+}
+.header-container .button a:hover {
+  color: var(--white-color);
+}
+.header-container .button a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #feb618;
+  color: white;
+  z-index: -1;
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  transform: scaleX(1);
+  border-radius: 5px;
+}
+.header-container .button a:hover::before {
+  color: white;
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+}
+
+
 @keyframes animation {
   from {
     opacity: 0;
@@ -322,10 +376,10 @@ header {
   .nav-btn {
     position: fixed;
     height: calc(100vh - 3rem);
-    top: 3rem;
+    top: 4rem;
     left: 0;
     width: 100%;
-    background-color: var(--clr-btn);
+    background-color: var(--blue-2);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -340,7 +394,7 @@ header {
   }
 
   #check:checked ~ .nav-btn .nav-link,
-  #check:checked ~ .nav-btn .log-sign {
+  #check:checked ~ .nav-btn .button {
     animation: animation .5s ease forwards var(--i);
   }
 
@@ -366,7 +420,7 @@ header {
 
   .nav-link:hover > a {
     transform: scale(1);
-    background-color: var(--clr-nav-hover);
+    background-color: var(--blue-3);
   }
 
   .dropdown,
@@ -379,7 +433,7 @@ header {
     pointer-events: auto;
     width: 100%;
     padding: 0;
-    background-color: var(--clr-dropdown-hov);
+    background-color: var(--blue-4);
     display: none;
   }
 
@@ -395,7 +449,7 @@ header {
 
   .dropdown-link > a {
     background-color: transparent;
-    color: var(--clr-light);
+    color: var(--white-color);
     padding: 1.2rem 2rem;
     line-height: 1;
   }
@@ -414,14 +468,14 @@ header {
 
   .arrow {
     z-index: 1;
-    background-color: var(--clr-btn);
+    background-color: var(--blue-2);
     left: 10%;
     transform: scale(1.1) rotate(45deg);
     transition: .5s;
   }
 
   .nav-link:hover .arrow {
-    background-color: var(--clr-nav-hover);
+    background-color: var(--blue-3);
   }
 
   .dropdown .dropdown .arrow {
@@ -429,11 +483,11 @@ header {
   }
 
   .dropdown-link:hover > a {
-    background-color: var(--clr-dropdown-link-hov);
+    background-color: var(--blue-5);
   }
 
   .dropdown-link:first-child:hover ~ .arrow {
-    background-color: var(--clr-nav-hover);
+    background-color: var(--blue-3);
   }
 
   .nav-link > a > i {
@@ -451,6 +505,14 @@ header {
     flex: initial;
     width: 100%;
     padding: 1.5rem 1.9rem;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  .header-container .button {
+    flex: initial;
+    width: 100%;
+    padding: 3rem 1.9rem;
     justify-content: flex-start;
     opacity: 0;
     transform: translateY(15px);

@@ -32,125 +32,60 @@ require 'config/database.php';
     <div class="header-container">
       <input type="checkbox" name="check" id="check">
       <div class="logo-container">
-        <h3 class="logo">Brand<span>Name</span></h3>
+        <div class="logo"><img src="<?= ROOT_URL ?>assets/icon/tab_icon.png" alt=""><span>DEDIKASI</span></div>
       </div>
 
       <div class="nav-btn">
         <div class="nav-links">
           <ul>
             <li class="nav-link" style="--i: .6s">
-              <a href="#">Home</a>
+              <a href="#">Beranda</a>
+            </li>
+            <li class="nav-link" style="--i: .6s">
+              <a href="#">Tentang</a>
             </li>
             <li class="nav-link" style="--i: .85s">
-              <a href="#">Menu<i class="fas fa-caret-down"></i></a>
+              <a href="#">Program<i class="fas fa-caret-down"></i></a>
               <div class="dropdown">
                 <ul>
                   <li class="dropdown-link">
-                    <a href="#">Link 1</a>
+                    <a href="#">Self Funded</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="#">Link 2</a>
+                    <a href="#">Partial Funded</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                    <a href="#">Fully Funded<i class="fas fa-caret-down"></i></a>
                     <div class="dropdown second">
                       <ul>
                         <li class="dropdown-link">
-                          <a href="#">Link 1</a>
+                          <a href="#">Reguler</a>
                         </li>
                         <li class="dropdown-link">
-                          <a href="#">Link 2</a>
-                        </li>
-                        <li class="dropdown-link">
-                          <a href="#">Link 3</a>
-                        </li>
-                        <li class="dropdown-link">
-                          <a href="#">More<i class="fas fa-caret-down"></i></a>
-                          <div class="dropdown second">
-                            <ul>
-                              <li class="dropdown-link">
-                                <a href="#">Link 1</a>
-                              </li>
-                              <li class="dropdown-link">
-                                <a href="#">Link 2</a>
-                              </li>
-                              <li class="dropdown-link">
-                                <a href="#">Link 3</a>
-                              </li>
-                              <div class="arrow"></div>
-                            </ul>
-                          </div>
+                          <a href="#">Premium</a>
                         </li>
                         <div class="arrow"></div>
                       </ul>
                     </div>
-                  </li>
-                  <li class="dropdown-link">
-                    <a href="#">Link 4</a>
-                  </li>
-                  <div class="arrow"></div>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-link" style="--i: 1.1s">
-              <a href="#">Services<i class="fas fa-caret-down"></i></a>
-              <div class="dropdown">
-                <ul>
-                  <li class="dropdown-link">
-                    <a href="#">Link 1</a>
-                  </li>
-                  <li class="dropdown-link">
-                    <a href="#">Link 2</a>
-                  </li>
-                  <li class="dropdown-link">
-                    <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown second">
-                      <ul>
-                        <li class="dropdown-link">
-                          <a href="#">Link 1</a>
-                        </li>
-                        <li class="dropdown-link">
-                          <a href="#">Link 2</a>
-                        </li>
-                        <li class="dropdown-link">
-                          <a href="#">Link 3</a>
-                        </li>
-                        <li class="dropdown-link">
-                          <a href="#">More<i class="fas fa-caret-down"></i></a>
-                          <div class="dropdown second">
-                            <ul>
-                              <li class="dropdown-link">
-                                <a href="#">Link 1</a>
-                              </li>
-                              <li class="dropdown-link">
-                                <a href="#">Link 2</a>
-                              </li>
-                              <li class="dropdown-link">
-                                <a href="#">Link 3</a>
-                              </li>
-                              <div class="arrow"></div>
-                            </ul>
-                          </div>
-                        </li>
-                        <div class="arrow"></div>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="dropdown-link">
-                    <a href="#">Link 4</a>
                   </li>
                   <div class="arrow"></div>
                 </ul>
               </div>
             </li>
             <li class="nav-link" style="--i: 1.35s">
-              <a href="#">About</a>
+              <a href="#">Dokumentasi</a>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <a href="#">Artikel</a>
             </li>
           </ul>
         </div>
-        <div class="log-sign" style="--i: 1.8s">
-          <a href="#" class="btn transparent">Log in</a>
+        <!-- <div class="log-sign" style="--i: 1.8s">
+          <a href="#" class="btn transparent">Login</a>
           <a href="#" class="btn solid">Sign up</a>
+        </div> -->
+        <div class="button" style="--i: 1.8s">
+            <a href="#">Login→</a>
         </div>
       </div>
       <div class="hamburger-menu-container">
