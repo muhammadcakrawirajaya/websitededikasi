@@ -24,9 +24,12 @@
 }
 
 * {
+  border: 0;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -35,13 +38,6 @@ body {
   background-color: white;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
 
 header {
   position: fixed;
@@ -605,8 +601,9 @@ header {
 }
 
 .portfolio:hover {
-  background-color: var(--primary-color);
+  background-color: var(--yellow-color);
   color: #ffffff;
+  border: 2px solid var(--yellow-color);;
 }
 
 .hero .image {
@@ -810,88 +807,352 @@ header {
 
 
 .about {
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   height: 100vh;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: yellow; */
 }
-.about-content img{
+.about-content .about-image{
   height: auto;
   width: 400px;
   max-width: 100%;
-}
-.about-text {
-  width: 550px;
-  max-width: 100%;
-  padding: 0 10px;
+  border-radius: 20px;
+  /* box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.2); */
 }
 .about-content {
-  width: 1280px;
-  max-width: 95%;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  /* margin: 0 auto; */
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
-  justify-content: space-around;
-}
-.about-text h1 {
-  color: #ffcc74;
-  font-size: 65px;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
-.about-text h5 {
-  color: black;
-  font-size: 25px;
-  margin-bottom: 25px;
-  text-transform: capitalize;
-  letter-spacing: 2px;
-}
-.about-text p {
-  color: #c0c4d6;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 1px;
-  margin-bottom: 45px;
-}
-.about-content button {
-  background-color: #ffcc74;
-  color: black;
-  border: 2px solid transparent;
-  text-decoration: none;
-  padding: 10px 30px;
-  border-radius: 30px;
-  font-size: 17px;
-  font-weight: bold;
-}
-.about-content button:hover {
-  transform: scale(1.2);
-  background-color: transparent;
-  border: 2px solid #ffcc74;
-  color: #ffcc74;
-  transform: .4s;
-  cursor: pointer;
+  justify-content: space-evenly;
 }
 
-@media screen and (max-width:1180px){
-  .about {
-    width: 100%;
-    height: auto;
-    padding: 70px 0px;
+
+/* START OF TABS */
+
+.about-tabs{
+  /* background-color: red; */
+  width: 650px;
+  height: 650px;
+  position: relative;
+}
+.about-tabs .title-container{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.about-tabs .title-container p{
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.about-tabs .title-container img{
+    width: 100px;
+  height: auto;
+  margin: 5px 0 20px 0;
+}
+.about-tabs .title-container .subtitle {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--text-dark);
+}
+.about-tabs .title-container .title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+
+
+.misi-row {
+  text-align: left;
+  max-width: max(65%, 500px);
+}
+
+
+.misi-col > * {
+  list-style: none;
+  padding: 0px;
+}
+
+.misi-col > * > li {
+  color: #3f0f64;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 400;
+  animation: fading 2s;
+}
+
+.misi-row ul li:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: 4px;
+  left: 0px;
+}
+
+
+
+.filosofi-row {
+  text-align: left;
+  max-width: max(65%, 500px);
+}
+
+
+.filosofi-col > * {
+  list-style: none;
+  padding: 0px;
+}
+
+.filosofi-col > * > li {
+  color: #3f0f64;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 400;
+  animation: fading 2s;
+  margin-bottom: 10px;
+}
+
+.filosofi-row ul li:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: 4px;
+  left: 0px;
+}
+
+
+
+.about-tabs .tab-container{
+  width: 650px;
+  overflow: hidden;
+  border-bottom: 0.5px solid black;
+}
+.about-tabs .tab-container p{
+color: #0081ff;
+  
+}
+.about-tabs .tab-container .tab{
+  float: left;
+  padding: 18px;
+  font-size: 14px;
+  cursor: pointer;  
+  background-color: inherit;
+  
+}
+.about-tabs .tab-container .tab:hover{
+  background-color: #e1e1e1;
+}
+.about-tabs .tab-container .tab.active{
+  background-color:var(--yellow-color);
+}
+.about-tabs .tab-container .tab.active p{
+  color: var(--extra-light);
+}
+
+.about-tabs .tab-content .visi{
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.about-tabs .tab-content .visi-desc{
+  line-height: 1.5rem;
+}
+.about-tabs .tab-content .filosofi-desc{
+  line-height: 1.5rem;
+}
+
+.about-tabs .tab-content .misi-title{
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+.about-tabs .tab-content {
+  width: 650px;
+  min-height: 400px;
+  margin-top: 20px;
+
+  /* border: 1px solid #cfcfcf; */
+  /* border-top: 1px solid #cfcfcf; */
+  position: absolute;
+  display: none;
+}
+.about-tabs .tab-content .filosofi-logo{
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.about-tabs .tab-content h1{
+  font-weight: 400;
+  font-size: 24px;
+  animation: fading 1s;
+}
+.about-tabs .tab-content p{
+  color: var(--text-dark);
+  line-height: 2rem;
+  font-size: 14px;
+  font-weight: 400;
+  animation: fading 2s;
+}
+@keyframes fading{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+@media (width < 1080px) {
+  .about-content .about-image{
+    width: 250px;
+  }
+  .about-tabs{
+    width: 450px;
+    height: 500px;
+  }
+  .about-tabs .tab-container{
+    width: 450px;
+  }
+  .about-tabs .tab-content {
+    width: 450px;
+    min-height: 200px;
+  }
+  .about-tabs .tab-content p{
+    font-size: 10px;
+    line-height: 1.5rem;
+  }
+  .misi-col > * > li {
+    font-size: 10px;
+  }
+  .misi-row ul li:before {
+    width: 5px;
+    height: 5px;
+  }
+  .filosofi-col > * > li {
+    font-size: 10px;
+  }
+  
+  .filosofi-row ul li:before {
+    width: 5px;
+    height: 5px;
+  }
+  .about-tabs .tab-content .visi{
+    font-size: 16px;
+  }
+  .about-tabs .tab-content .misi-title{
+    font-size: 16px;
+  }
+  .about-tabs .title-container .subtitle {
+    font-size: 20px;
+  }
+  .about-tabs .title-container .title {
+    font-size: 25px;
+  }
+  .about-tabs .title-container p{
+    font-size: 12px;
+  }
+    .about-tabs .tab-container .tab{
+      padding: 8px;
+      font-size: 10px;
+    }
+    .about-tabs .tab-content .filosofi-logo{
+      width: 100px;
+    }
+}
+@media (width < 760px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-tabs .tab-content {
+    margin-top: 10px;
+  }
+  .about-content .about-image{
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  .about-tabs{
+    height: 400px;
+  }
+  .about-tabs .tab-content p{
+    line-height: 1rem;
+  }
+  .about-tabs .tab-content .visi-desc{
+    line-height: 1rem;
+  }
+  .about-tabs .tab-content .filosofi-desc{
+    line-height: 1rem;
+  }
+  .about-tabs .tab-content .visi{
+    font-size: 12px;
+  }
+  .about-tabs .tab-content .misi-title{
+    font-size: 12px;
+  }
+  .about-tabs .tab-content .filosofi-logo{
+    margin-bottom: 5px;
+    width: 80px;
+  }
+  .filosofi-col > * > li {
+    margin-bottom: 5px;
   }
 }
-@media screen and (max-width:650px){
-  .about-content img{
-    margin-bottom: 35px;
+@media (width < 470px) {
+  .about-content .about-image{
+    width: 150px;
+    margin-bottom: 10px;
   }
-  .about-text h1 {
-    font-size: 60px;
-    margin-bottom: 25px;
+  .about-tabs{
+    width: 350px;
+    height: 430px;
   }
+  .about-tabs .tab-container{
+    width: 350px;
+  }
+  .about-tabs .tab-content {
+    width: 350px;
+    min-height: 200px;
+  }
+  
 }
+@media (width < 370px) {
+  .about-content .about-image{
+display: none;
+  }
+  .about-tabs{
+    width: 300px;
+    height: 520px;
+  }
+  .about-tabs .tab-container{
+    width: 300px;
+  }
+  .about-tabs .tab-content {
+    width: 300px;
+    min-height: 200px;
+  }
+  
+}
+/* END OF TABS */
 /* END OF ABOUT */
+
+
 .testimonial-body {
   width: 100%;
 	height: 100vh;
